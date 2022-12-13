@@ -18,7 +18,7 @@ Neste readme, procurei abordar os conceitos visto durante o curso, entretanto n�
 - MySQL / Flyway
 - JPA / HIbernate
 - Maven
-- Insomnia
+- Insomnia / Postman
 
 ## Projeto a ser desenvolvido
 Projeto de uma clinica médica chamada Voll Med, para controlar o cadastro de médicos e pacientes, e de agendamento de consultas.
