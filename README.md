@@ -42,7 +42,7 @@ Os dados são enviados para API através de uma requisição HTTP. Então é pre
 <img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F56cb10e8-fcb7-4ac6-8ed9-4047016b4e84%2FUntitled.png?id=45c32c89-1cab-4387-bb68-400da752e168&table=block&spaceId=c201bf83-8b0f-4f26-aff6-11cb5d30850e&name=Untitled.png&userId=4b9f37e7-280d-4f3d-bb98-bcfe01bcc215&cache=v2" alt="Requisição de cadastro de médico"/>
 
 ## Receber dados na API
-Os dados são recebidos pelo controller, devidamente mapeado. Estes dados, são passados para um ***DTO (Data Transfer Object)***, que é um padrão utilizado para receber e enviar dados. Esse padrão sera utilizado em todas as entradas e saídas de dados da aplicação.
+Os dados são recebidos pelo [controller](https://github.com/FernandesPixel/spring-boot/tree/main/src/main/java/med/voll/api/controller), devidamente mapeado. Estes dados, são passados para um ***DTO (Data Transfer Object)***, que é um padrão utilizado para receber e enviar dados. Esse padrão sera utilizado em todas as entradas e saídas de dados da aplicação.
 
 ## Adicionar dependências no projeto
 As dependências são adicionadas no arquivo [pom.xml](https://github.com/FernandesPixel/spring-boot/blob/main/pom.xml). Para adicionar as dependências corretamente, é recomendado utilizar o [spring initializr](https://start.spring.io/) para encontrar as dependências.
