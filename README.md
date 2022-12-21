@@ -77,4 +77,6 @@ O Spring Data já oferece um objeto que abstrai a lógica de paginação, atrav�
 
 Com a paginação implementada, o cliente da API consegue determinar a quantidade de registros, qual página e outros atributos do objeto Page, customizando a resposta da requisição.
 
+`GET:http://localhost:8080/pacientes?size=1&page=0`
+
 A Ordenação funciona da mesma maneira, passando um parâmetro na URL e definindo por qual atributo deve ser ordenado. Para definir um padrão, é utilizado a anotação ***@PageableDefault*** passando parâmetros para os atributos do objeto Page.
