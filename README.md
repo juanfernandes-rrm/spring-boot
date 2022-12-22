@@ -35,6 +35,7 @@ Para mapear um controller e uma requisição, é utilizado o ***Spring MVC***, q
 - ***@GetMapping***: Mapeia o método GET.
 - ***@PostMapping***: Mapeia o método POST.
 - ***@RequestBody***: Define que os dados de uma requisição estão no body.
+- ***@Transactional***: Garante que todo o processo seja concluído, antes de realizar o commit. (princípio da atomicidade).
 
 ## Envio de dados para a API
 Os dados são enviados para API através de uma requisição HTTP. Então é preciso definir o método e a URL da API, além dos dados que serão enviados. No caso abaixo, os dados estão sendo enviados no corpo da requisição no formato JSON( (JavaScript Object Notation).
@@ -68,3 +69,14 @@ O Bean Validation é utilizado para facilitar a validação, isto é feito atrav
 - ***@NotNull***: Validar nulos.
 - ***@NotBlank***: Validar nulos e brancos.
 - ***@Pattern***: Validar um padrão regex.
+
+## Paginação
+Limita a quantidade de registros devolvidos em uma resposta.
+
+O Spring Data já oferece um objeto que abstrai a lógica de paginação, através da interface ***Pageable***. Ao passar esse objeto para o método ***findAll()***, é retornado um objeto ***Page***, que contém os dados do Genérico passado e informações sobre a paginação.
+
+Com a paginação implementada, o cliente da API consegue determinar a quantidade de registros, qual página e outros atributos do objeto Page, customizando a resposta da requisição.
+
+`GET:http://localhost:8080/pacientes?size=1&page=0`
+
+A Ordenação funciona da mesma maneira, passando um parâmetro na URL e definindo por qual atributo deve ser ordenado. Para definir um padrão, é utilizado a anotação ***@PageableDefault*** passando parâmetros para os atributos do objeto Page.
