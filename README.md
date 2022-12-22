@@ -32,9 +32,12 @@ Entretanto, a configuração destes módulos é trabalhosa, extensa e de difíci
 Para mapear um controller e uma requisição, é utilizado o ***Spring MVC***, que fornece algumas anotações:
 - ***@RestController***: Declara a classe como um controller REST.
 - ***@RequestMapping***: Define o caminho da requisição.
-- ***@GetMapping***: Mapeia o método GET.
-- ***@PostMapping***: Mapeia o método POST.
+- ***@GetMapping***: Mapeia requisições GET.
+- ***@PostMapping***: Mapeia requisições POST.
+- ***@PutMapping***: Mapeia requisições PUT.
+- ***@DeleteMapping***: Mapeia requisições DELETE.
 - ***@RequestBody***: Define que os dados de uma requisição estão no body.
+- ***@PathVariable***: Define que os dados de uma requisição estão na URL (Parâmetro Dinâmico). 
 - ***@Transactional***: Garante que todo o processo seja concluído, antes de realizar o commit. (princípio da atomicidade).
 
 ## Envio de dados para a API
