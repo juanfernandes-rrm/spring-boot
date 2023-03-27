@@ -108,3 +108,13 @@ Um Endpoint, para seguir o padrão REST, deve retornar um código de resposta ad
 Para padronizar e controlar as resposta dos Endpoints, é utilizado a classe ***ResponseEntity*** do Spring como retorno.
 
 Assim como, o código para um cadastro é 201 - Created, devolvendo no corpo da resposta o dados do recurso/registro cadastrado, e também um cabeçalho do protocolo HTTP (Location).
+
+## Tratamento de erros
+Quando ocorre um erro em uma requisição, o Spring retorna por padrão o código HTTP 500, que indica erro no servidor interno, junto com outras informações em formato JSON.
+
+Para retornar códigos adequados, seria possível adicionar blocos try-catch nos métodos do controller para capturar exceções. Entretanto, essas exceções podem se repetir em vários métodos e utilizar try-catch para fazer o tratamento iria poluir a classe controller. Por isso, a melhor alternativa é criar uma classe que será responsável por realizar o tratamento de erros.
+
+Para que esta classe seja reconhecida pelo Spring, são necessárias duas anotações:
+
+- ***@RestControllerAdvice***: Anota a classe como uma classe de tratamento de erro.
+- ***@ExceptionHandler***: Anota o método que irá tratar a exceção passada.
