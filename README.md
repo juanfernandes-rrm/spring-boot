@@ -133,3 +133,9 @@ Existem várias formas de realizar o processo de autenticação de uma API, entr
 Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisição para uma URL de autenticação, caso as credenciais estejam corretas, é gerado um Token e enviado para o cliente na resposta.
 
 Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisição para uma URL de autenticação, caso as credenciais estejam corretas, é gerado um Token e enviado para o cliente na resposta.
+
+## JSON Web Token - Biblioteca Auth0
+JSON Web Token, ou JWT, é um padrão utilizado para a geração de tokens, que nada mais são do que Strings, representando, de maneira segura, informações que serão compartilhadas entre dois sistemas. Você pode conhecer melhor sobre esse padrão em seu [site oficial](https://jwt.io/introduction)
+
+
+
