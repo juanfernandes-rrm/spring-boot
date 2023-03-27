@@ -118,3 +118,18 @@ Para que esta classe seja reconhecida pelo Spring, são necessárias duas anota�
 
 - ***@RestControllerAdvice***: Anota a classe como uma classe de tratamento de erro.
 - ***@ExceptionHandler***: Anota o método que irá tratar a exceção passada.
+
+## Spring Security
+Módulo especifico do Spring para tratar segurança em aplicações.
+# Objetivos
+- Autenticação
+- Autorização
+- Proteção contra ataques (CSRF, clickjacking, etc)
+
+Autenticação em aplicações web (***Statefull***) é diferente de autenticação em API REST (***Stateless***). Em uma aplicação, a autenticação é feita através de sessões, que guardam informações sobre o usuário, que são mantidas pelo servidor, Porém, em uma API REST, isso não ocorre, já que um dos conceitos REST é ser Stateless.
+
+Existem várias formas de realizar o processo de autenticação de uma API, entretanto, uma das mais populares é através de ***Tokens***. Neste curso, é abordado o ***JWT (JSON Web Tokens)*** para gerenciar os Tokens.
+
+Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisição para uma URL de autenticação, caso as credenciais estejam corretas, é gerado um Token e enviado para o cliente na resposta.
+
+Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisição para uma URL de autenticação, caso as credenciais estejam corretas, é gerado um Token e enviado para o cliente na resposta.
