@@ -121,7 +121,7 @@ Para que esta classe seja reconhecida pelo Spring, são necessárias duas anota�
 
 ## Spring Security
 Módulo especifico do Spring para tratar segurança em aplicações.
-# Objetivos
+### Objetivos
 - Autenticação
 - Autorização
 - Proteção contra ataques (CSRF, clickjacking, etc)
