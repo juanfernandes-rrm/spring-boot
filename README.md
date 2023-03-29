@@ -10,6 +10,11 @@ Neste readme, procurei abordar os conceitos visto durante o curso, entretanto n�
  - Flyway como ferramenta de Migrations da API
  - Validações utilizando o Bean Validation
  - Paginação dos dados da API
+ - Boas práticas
+ - Tratamento de erros
+ - Spring Security
+ - JSON Web Token
+ - Controle de acesso
  
  ## Tecnologias
 - Spring Boot 3
@@ -19,6 +24,8 @@ Neste readme, procurei abordar os conceitos visto durante o curso, entretanto n�
 - JPA / HIbernate
 - Maven
 - Insomnia / Postman
+- JWT
+- Spring Security
 
 ## Projeto a ser desenvolvido
 Projeto de uma clinica médica chamada Voll Med, para controlar o cadastro de médicos e pacientes, e de agendamento de consultas.
