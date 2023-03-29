@@ -135,7 +135,20 @@ Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisiç
 Essa estratégia funciona da seguinte forma: Após o cliente fazer uma requisição para uma URL de autenticação, caso as credenciais estejam corretas, é gerado um Token e enviado para o cliente na resposta.
 
 ## JSON Web Token - Biblioteca Auth0
+
 JSON Web Token, ou JWT, é um padrão utilizado para a geração de tokens, que nada mais são do que Strings, representando, de maneira segura, informações que serão compartilhadas entre dois sistemas. Você pode conhecer melhor sobre esse padrão em seu [site oficial](https://jwt.io/introduction)
 
+## Controle de acesso
 
+Para criar o controle de acesso, todas as requisições devem enviar o token jwt e verificar a sua validade. Para que isso seja feito de maneira que não seja necessário repetir código no controller, é criado uma classe que é responsável por essa validação. Desta forma, a requisição é interceptada antes de chegar ao controller. Este interceptador é o Handler Interceptor do Spring, que funciona como um Filter da especificação Servlet.
+
+<img width="600" src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fed09f174-48b7-4c26-9da0-053f2855cd0c%2FUntitled.png?id=ab22dba9-bcab-482b-85d7-0dd14c39dd57&table=block&spaceId=c201bf83-8b0f-4f26-aff6-11cb5d30850e&width=2000&userId=4b9f37e7-280d-4f3d-bb98-bcfe01bcc215&cache=v2"/>
+
+A classe que representa o Filter é anotada com ***@Component***, essa anotação é utilizada para que o Spring carregue uma classe genérica. Esta classe também deve herdar da ***classe OncePerRequestFilter*** do Spring e implementar o método ***doFilter()***.
+
+Para que a requisição seja repassada para o próximo filtro, é necessário utilizar o método ***doFilter()*** do objeto *FilterChain*.
+
+O Token é enviando no cabeçalho da requisição, por ser uma informação de configuração. Este cabeçalho é chamado de Authorization.
+
+Para validar o Token é utilizado o método ***verify()*** da biblioteca Auth0. E o controle de acesso é feito através da classe ***SecurityContext*** do Spring.
 
